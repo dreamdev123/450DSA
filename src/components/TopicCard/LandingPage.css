@@ -1,0 +1,117 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+@import url('https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css');
+
+html, body {
+  scroll-behavior: smooth;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #eafaf1; 
+}
+
+.hero-section {
+  background: linear-gradient(to bottom right, #32a852, #28a745);
+  padding: 100px 0;
+  color: white;
+  min-height: 100vh;
+}
+
+.features-section, .testimonials-section, .advanced-features-section {
+  padding: 60px 0;
+}
+
+.call-to-action-section {
+  background-color: #32a852; 
+  padding: 60px 0;
+  color: white;
+}
+
+.landing-page section {
+  width: 100%;
+  min-height: auto;
+  overflow-y: visible;
+}
+
+.cta-button {
+  background-color: #28a745; 
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  color: white;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.1);
+  background-color: #218838; 
+}
+
+.feature-card, .step-card, .testimonial-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+}
+
+.feature-card:hover, .step-card:hover, .testimonial-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.feature-img {
+  transition: transform 0.3s ease;
+}
+
+.feature-img:hover {
+  transform: scale(1.1);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.footer-section {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+}
+
+.section-title {
+  color: #28a745; 
+}
+
+.hero-title, .hero-subtitle {
+  color: white;
+}
+
+.start-button {
+  background-color: #40ba46;
+  color: white;
+}
+
+.start-button:hover {
+  background-color: #218838;
+}
+
+.testimonial-card img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
