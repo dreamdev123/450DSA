@@ -22,7 +22,7 @@ export default function CoreProblemsPage({ questionData }) {
 
   let topicCard = questionData.map((topic, index) => {
     let { topicName, doneQuestions, questions, started } = topic;
-    let filteredQuestions = questions.slice(18); 
+    let filteredQuestions = questions.slice(18);
     let percentDone = findPercentage(doneQuestions, filteredQuestions.length);
     let questionsRemainig = filteredQuestions.length - doneQuestions;
 
@@ -33,18 +33,22 @@ export default function CoreProblemsPage({ questionData }) {
       <Fade duration={500 + index * 0.4} key={index}>
         <div className="col mb-4">
           <Link
-            to={`/${topic.topicName.replace(/[^A-Z0-9]+/gi, "_").toLowerCase()}`}
+            to={`/${topic.topicName
+              .replace(/[^A-Z0-9]+/gi, "_")
+              .toLowerCase()}`}
             style={{ textDecoration: "none" }}
           >
             <Card
               className={`mb-3 inprogress-card animate__slideInDown hvr-grow ${
-                dark ? "darkCard" : "coreProblemsCard" 
+                dark ? "darkCard" : "coreProblemsCard"
               }`}
             >
               <Card.Body>
                 <Row>
                   <Col>
-                    <Card.Title className="topicName">{topic.topicName}</Card.Title>
+                    <Card.Title className="topicName">
+                      {topic.topicName}
+                    </Card.Title>
                   </Col>
                   <Col>
                     <h4>
@@ -81,11 +85,9 @@ export default function CoreProblemsPage({ questionData }) {
 
   return (
     <>
-      <h3 className="app-heading2 text-center mb-3">
-        Core Problems 🔥
-      </h3>
-{}
-<Navbar />
+      <h3 className="app-heading2 text-center mb-3">Core Problems 🔥</h3>
+      {}
+      <Navbar />
       <div className="container container-custom">
         <div className="row row-cols-1 row-cols-md-3 mt-3 grids">
           {topicCard}
